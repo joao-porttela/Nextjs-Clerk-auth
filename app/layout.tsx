@@ -5,6 +5,7 @@ import {Metadata} from "next";
 import localFont from "next/font/local";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://clerk-next-app.vercel.app/"),
   title: "Next.js Clerk Template",
   description:
     "A simple and powerful Next.js template featuring authentication and user management powered by Clerk.",
@@ -44,8 +45,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <body className={`min-h-screen flex flex-col antialiased`}>{children}</body>
       </ClerkProvider>
 
-      {/* <Script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js" /> */}
-      {/* <Script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js" /> */}
+      <Script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js" />
+      <Script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js" />
     </html>
   );
 }
